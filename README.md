@@ -1,3 +1,5 @@
+[![Actions Status: build](https://github.com/inponomarev/vaadin-celesta-springboot-template/workflows/build/badge.svg)](https://github.com/inponomarev/vaadin-celesta-springboot-template/actions?query=workflow%3A"build") 
+
 # Java + Spring Boot + Vaadin Flow + Celesta template
 
 This is a template of Java + Spring Boot + Vaadin Flow + Celesta application
