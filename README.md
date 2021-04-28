@@ -8,10 +8,8 @@ This is a template of Java + Spring Boot + Vaadin Flow + Celesta application
 
 ### Building the executable jar (development mode) 
 
+* With unit and UI tests: `mvnw verify`
 * No tests: `mvnw verify -DskipTests`
-* Unit tests only: `mvnw verify`
-* Unit and UI tests: `mvnw verify -P it`
-
 
 ### Building the docker container
 

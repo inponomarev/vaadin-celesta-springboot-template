@@ -13,7 +13,7 @@ RUN ls -R . && ./mvnw --version
 
 COPY . ./
 #Build application
-RUN --mount=type=cache,target=/root/.m2 --mount=type=cache,target=node_modules ./mvnw verify -P it,production
+RUN --mount=type=cache,target=/root/.m2 --mount=type=cache,target=node_modules ./mvnw verify -P production
 #Split fat jar into layers
 RUN cd target && java -Djarmode=layertools -jar application.jar extract
 
