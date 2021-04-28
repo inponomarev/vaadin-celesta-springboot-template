@@ -10,4 +10,7 @@
     <logger name="root" level="INFO">
         <appender-ref ref="STDOUT" />
     </logger>
+    <logger name="org.atmosphere" level="WARN">
+        <appender-ref ref="STDOUT" />
+    </logger>
 </configuration>

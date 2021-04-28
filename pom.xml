@@ -14,6 +14,8 @@
         <vaadin.version>14.5.3</vaadin.version>
         <junit.jupiter.version>5.7.1</junit.jupiter.version>
         <assertj.core.version>3.19.0</assertj.core.version>
+        <spring.boot.starter.celesta.version>2.1.44</spring.boot.starter.celesta.version>
+        <celesta.version>7.3.39</celesta.version>
     </properties>
 
     <parent>
@@ -110,11 +112,32 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--launch browser in development mode-->
         <dependency>
             <groupId>org.vaadin.artur</groupId>
             <artifactId>a-vaadin-helper</artifactId>
             <version>1.6.0</version>
         </dependency>
+
+        <!--
+        <dependency>
+            <groupId>ru.curs</groupId>
+            <artifactId>spring-boot-starter-celesta</artifactId>
+            <version>${spring.boot.starter.celesta.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ru.curs</groupId>
+                    <artifactId>celesta-system-services</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>ru.curs</groupId>
+            <artifactId>celesta-system-services</artifactId>
+            <version>${celesta.version}</version>
+        </dependency>
+-->
 
         <dependency>
             <groupId>com.h2database</groupId>
