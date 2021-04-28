@@ -253,7 +253,7 @@
                         <configuration>
                             <target>
                                 <echo>Waiting for exec file...</echo>
-                                <sleep seconds="1" />
+                                <sleep seconds="1"/>
                             </target>
                         </configuration>
                         <goals>
@@ -268,6 +268,7 @@
                 <version>0.8.6</version>
                 <executions>
                     <execution>
+                        <!--Prepare agent for unit tests-->
                         <id>ut-prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
@@ -278,6 +279,7 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <!--Prepare agent for integration tests-->
                         <id>it-prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
@@ -288,6 +290,26 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>combine-coverage</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>merge</goal>
+                        </goals>
+                        <configuration>
+                            <fileSets>
+                                <fileSet>
+                                    <directory>target</directory>
+                                    <includes>
+                                        <include>ut-coverage.exec</include>
+                                        <include>it-coverage.exec</include>
+                                    </includes>
+                                </fileSet>
+                            </fileSets>
+                            <destFile>target/combined-coverage.exec</destFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <!-- Unit test coverage report -->
                         <id>ut-report</id>
                         <phase>verify</phase>
                         <goals>
@@ -299,6 +321,7 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <!-- Integration test coverage report -->
                         <id>it-report</id>
                         <phase>verify</phase>
                         <goals>
@@ -307,6 +330,18 @@
                         <configuration>
                             <dataFile>target/it-coverage.exec</dataFile>
                             <outputDirectory>target/it-coverage</outputDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <!-- Combined test coverage report -->
+                        <id>combined-report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <dataFile>target/combined-coverage.exec</dataFile>
+                            <outputDirectory>target/combined-coverage</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
