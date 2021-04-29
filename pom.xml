@@ -120,7 +120,6 @@
             <version>1.6.0</version>
         </dependency>
 
-        <!--
         <dependency>
             <groupId>ru.curs</groupId>
             <artifactId>spring-boot-starter-celesta</artifactId>
@@ -137,7 +136,11 @@
             <artifactId>celesta-system-services</artifactId>
             <version>${celesta.version}</version>
         </dependency>
--->
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>com.h2database</groupId>
@@ -182,6 +185,19 @@
         <defaultGoal>spring-boot:run</defaultGoal>
 
         <plugins>
+            <plugin>
+                <groupId>ru.curs</groupId>
+                <artifactId>celesta-maven-plugin</artifactId>
+                <version>${celesta.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>gen-cursors</goal>
+                            <goal>gen-score-resources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <!--
                 Take care of synchronizing java dependencies and imports in

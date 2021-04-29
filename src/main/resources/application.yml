@@ -3,3 +3,8 @@ server:
 # Ensure application is run in Vaadin 14/npm mode
 vaadin:
   compatibilityMode: false
+
+celesta:
+  h2:
+    inMemory: true
+

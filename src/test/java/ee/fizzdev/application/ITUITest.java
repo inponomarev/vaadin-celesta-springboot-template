@@ -12,6 +12,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ITUITest {
 
+    public static final String TEST_NAME = "Konstantin Konstantinopolsky";
+
     @BeforeAll
     static void setup(){
         ChromeOptions options = new ChromeOptions();
@@ -29,10 +31,10 @@ public class ITUITest {
 
 
         open("http://localhost:8080/");
-        $("#name_input").sendKeys("blahblaqh");
-        $("#hellobtn").click();
-        SelenideElement note = $("vaadin-notification-card");
-        assertThat(note.getText()).contains("Hello blahblaqh");
+        $("#name_input").sendKeys(TEST_NAME);
+        $("#addname_btn").click();
+        SelenideElement note = $("#names");
+        assertThat(note.getText()).contains(TEST_NAME);
 
 
     }
