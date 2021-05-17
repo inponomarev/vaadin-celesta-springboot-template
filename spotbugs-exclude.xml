@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FindBugsFilter>
+  <!--Vaadin use Serializable for all of its components -->
+  <Bug code="Se"/>
+</FindBugsFilter>

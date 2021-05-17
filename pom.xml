@@ -18,6 +18,7 @@
         <celesta.version>7.3.39</celesta.version>
         <checkstyle.maven.plugin.version>3.1.2</checkstyle.maven.plugin.version>
         <checkstyle.version>8.42</checkstyle.version>
+        <spotbugs.maven.plugin.version>4.2.3</spotbugs.maven.plugin.version>
     </properties>
 
     <parent>
@@ -411,6 +412,23 @@
                         <version>${checkstyle.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>${spotbugs.maven.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>check</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <excludeFilterFile>spotbugs-exclude.xml</excludeFilterFile>
+                </configuration>
             </plugin>
         </plugins>
     </build>
