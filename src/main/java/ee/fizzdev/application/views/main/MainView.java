@@ -38,7 +38,7 @@ public class MainView extends AppLayout {
         setPrimarySection(Section.DRAWER);
         addToNavbar(true, createHeaderContent());
         menu = createMenu();
-        addToDrawer(createDrawerContent(menu));
+        addToDrawer(createDrawerContent());
     }
 
     private Component createHeaderContent() {
@@ -55,7 +55,7 @@ public class MainView extends AppLayout {
         return layout;
     }
 
-    private Component createDrawerContent(Tabs menu) {
+    private Component createDrawerContent() {
         VerticalLayout layout = new VerticalLayout();
         layout.setSizeFull();
         layout.setPadding(false);

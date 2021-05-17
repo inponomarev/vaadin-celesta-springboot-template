@@ -50,18 +50,18 @@ public class HelloWorldView extends HorizontalLayout {
         });
     }
 
-    void refreshNames() {
+    private void refreshNames() {
         List<Person> people = namesDao.getNames(new SystemCallContext());
         names.removeAll();
-        for (Person name : people) {
+        for (Person person : people) {
             Div div = new Div();
             div.setText(
-                    String.format("%d-%s", name.getId(), name.getName()));
+                    String.format("%d-%s", person.getId(), person.getName()));
             names.add(div);
         }
     }
 
-    public void sayHelloInTerminal() {
+    public final void sayHelloInTerminal() {
         System.out.println("hello, terminal");
     }
 
