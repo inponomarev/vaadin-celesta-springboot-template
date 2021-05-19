@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+    #We work on Vaadin 14 LTS
+    - dependency-name: com.vaadin:vaadin-bom
+      versions:
+        - ">= 15.0.0"
+    - dependency-name: com.vaadin:vaadin-maven-plugin
+      versions:
+        - ">= 15.0.0"
