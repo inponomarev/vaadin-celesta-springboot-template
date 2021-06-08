@@ -11,7 +11,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <vaadin.version>14.6.1</vaadin.version>
+        <vaadin.version>14.6.2</vaadin.version>
         <junit.jupiter.version>5.7.2</junit.jupiter.version>
         <assertj.core.version>3.19.0</assertj.core.version>
         <spring.boot.starter.celesta.version>2.1.47</spring.boot.starter.celesta.version>
