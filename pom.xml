@@ -13,7 +13,7 @@
         <java.version>11</java.version>
         <vaadin.version>14.6.1</vaadin.version>
         <junit.jupiter.version>5.7.2</junit.jupiter.version>
-        <assertj.core.version>3.19.0</assertj.core.version>
+        <assertj.core.version>3.20.0</assertj.core.version>
         <spring.boot.starter.celesta.version>2.1.47</spring.boot.starter.celesta.version>
         <celesta.version>7.3.44</celesta.version>
         <checkstyle.maven.plugin.version>3.1.2</checkstyle.maven.plugin.version>
