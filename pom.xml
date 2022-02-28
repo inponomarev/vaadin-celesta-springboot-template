@@ -17,7 +17,7 @@
         <spring.boot.starter.celesta.version>2.1.47</spring.boot.starter.celesta.version>
         <celesta.version>7.3.45</celesta.version>
         <checkstyle.maven.plugin.version>3.1.2</checkstyle.maven.plugin.version>
-        <checkstyle.version>8.43</checkstyle.version>
+        <checkstyle.version>10.0</checkstyle.version>
         <spotbugs.maven.plugin.version>4.2.3</spotbugs.maven.plugin.version>
     </properties>
 
